@@ -208,3 +208,25 @@ footer .social-links a:hover {
     transform: scale(1.1);
     color: #4078c0; /* Color azul de GitHub */
 }
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.social-link svg {
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+.social-link:nth-child(2):hover svg {
+    color: #0077b5;
+}
