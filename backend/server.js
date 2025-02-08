@@ -34,5 +34,14 @@ app.post("/send-email", async (req, res) => {
                 }
             ]
         })
+        res.status(200).json({ success: true, message: "Mail sended correctly" })
+    } catch(err) {
+        console.error("Error sending email", err)
+        res.status(500).json({ success: false, message: "Error sending email" })
     }
+})
+
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`)
 })
