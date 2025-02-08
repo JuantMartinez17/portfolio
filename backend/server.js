@@ -14,16 +14,16 @@ app.post("/send-email", async (req, res) => {
     const { name, email, subject, body } = req.body;
 
     try {
-        const request = await mailjet.post("send", { "version": "3.1" }).request({
+        const request = await mailjet.post("send", { "version": "v3.1" }).request({
             "Messages": [
                 {
                     "From": {
-                        "Email": email,
+                        "Email": process.env.MAILJET_FROM_EMAIL,
                         "Name": name
                     },
                     "To": [
                         {
-                            "Email": process.env.EMAIL_TO,
+                            "Email": process.env.MAILJET_EMAIL_TO,
                             "Name": "Juan Tomas Martinez"
                         }
                     ],
