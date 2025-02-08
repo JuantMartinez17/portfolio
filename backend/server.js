@@ -28,8 +28,8 @@ app.post("/send-email", async (req, res) => {
                         }
                     ],
                     "Subject": subject,
-                    "TextPart": body,
-                    "HTMLPart": `<h3>${body}</h3>`
+                    "TextPart": `Nuevo mensaje de ${name} <${email}>: ${body}`,
+                    "HTMLPart": `<h3>Nuevo mensaje de ${name}, email ${email}</h3><br/><p>${body}</p>`
                 }
             ]
         })
