@@ -4,8 +4,15 @@
     box-sizing: border-box;
 }
 
+.oswald-regular {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
 h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 p {
