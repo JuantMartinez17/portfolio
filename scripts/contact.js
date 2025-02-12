@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             body: message
         }
 
-        fetch('https://portfolio-r3cu.onrender.com/send-email', {
+        fetch('https://portfolio-production-621d.up.railway.app/send-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
