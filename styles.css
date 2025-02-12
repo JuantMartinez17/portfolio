@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,10 +19,6 @@
 
 h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
-}
-
-p {
-    font-family: 'Merriwather', serif;
 }
 
 body {
@@ -99,7 +95,6 @@ nav ul li a:hover {
     transform: scale(1.1);
 }
 
-
 .title {
     font-family: "Bebas Neue", serif;
     font-size: 48px;
@@ -120,6 +115,7 @@ hr {
     border: none;
     margin: 20px auto;
 }
+
 .btn {
     display: inline-block;
     font-family: "Bebas Neue", serif;
@@ -257,7 +253,7 @@ hr {
 .github-link {
     display: inline-block;
     background-color: #facc15;
-    color: white;
+    color: rgb(55, 44, 44);
     padding: 10px 20px;
     font-weight: bold;
     border-radius: 5px;
@@ -434,7 +430,6 @@ footer .social-links {
     fill: #005c8f;
 }
 
-
 @media (max-width: 768px) {
     .social-links {
         flex-direction: column;
@@ -444,4 +439,3 @@ footer .social-links {
         font-size: 1rem;
     }
 }
-
