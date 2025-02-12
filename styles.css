@@ -360,64 +360,88 @@ hr {
     }
 }
 
-
-/*footer {
-    background: #333;
+footer {
+    background-color: #333;
     color: #fff;
-    padding: 2rem 0;
+    padding: 20px 0;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 footer .social-links {
-    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-footer .social-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-footer .social-links a:hover {
-    text-decoration: underline;
-}
-
-.github-link {
+.github-footer-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    color: #000;
     text-decoration: none;
-    color: black;
     font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.github-link svg {
-    transition: transform 0.2s ease-in-out;
+.github-footer-link svg {
+    margin-right: 8px;
+    fill: #000;
 }
 
-.github-link:hover svg {
-    transform: scale(1.1);
-    color: #4078c0;
+.github-footer-link:hover {
+    color: #24292f;
 }
 
-.social-link {
+.github-footer-link:hover svg {
+    fill: #24292f;
+}
+
+.linkedin-footer-link {
     display: flex;
     align-items: center;
-    gap: 8px;
+    color: #0a66c2;
     text-decoration: none;
-    color: black;
     font-weight: bold;
-    margin-right: 15px;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.social-link svg {
-    transition: transform 0.2s ease-in-out;
+.linkedin-footer-link svg {
+    margin-right: 8px;
+    fill: #0a66c2;
 }
 
-.social-link:hover svg {
-    transform: scale(1.1);
+.linkedin-footer-link:hover {
+    color: #005c8f;
 }
 
-.social-link:nth-child(2):hover svg {
-    color: #0077b5;
-}*/
+.linkedin-footer-link:hover svg {
+    fill: #005c8f;
+}
+
+
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+}
+
