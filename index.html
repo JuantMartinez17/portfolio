@@ -1,151 +1,447 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Juan Tomas Martinez</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/assets/png/Group 67691.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark light" />
 
+  <!-- Primary Meta Tags -->
+  <title>Juan Tomás Martínez — Software Developer</title>
+  <meta name="title" content="Juan Tomás Martínez — Software Developer" />
+  <meta name="description" content="Software developer from Buenos Aires. Building web and mobile applications with React, Node.js, and Kotlin. Open to opportunities." />
+  <meta name="author" content="Juan Tomás Martínez" />
+  <meta name="keywords" content="Juan Tomas Martinez, software developer, full stack, react, node.js, kotlin, android, buenos aires, argentina, portfolio" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://juantomasmartinez.com/" />
+  <meta property="og:title" content="Juan Tomás Martínez — Software Developer" />
+  <meta property="og:description" content="Software developer from Buenos Aires. Building web and mobile applications." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juan Tomás Martínez — Software Developer" />
+  <meta name="twitter:description" content="Software developer from Buenos Aires. Building web and mobile applications." />
+  <meta name="twitter:image" content="/assets/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="alternate icon" href="/assets/favicon.ico" />
+
+  <!-- Fonts: Geist + Geist Mono (Vercel) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Juan Tomás Martínez",
+    "jobTitle": "Software Developer",
+    "url": "https://juantomasmartinez.com/",
+    "sameAs": [
+      "https://github.com/JuantMartinez17",
+      "https://www.linkedin.com/in/juan-tomas-martinez/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires",
+      "addressCountry": "AR"
+    }
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2 class="title">Hi, my name is Juan Tomas Martinez</h2>
-            <p class="subtitle">I'm a software developer from Argentina</p>
-            <hr>
-            <a href="#projects" class="btn">Want to see my projects?</a>
+  <!-- Skip link for accessibility -->
+  <a href="#main" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
+
+  <!-- Animated grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Juan Tomás Martínez">
+        <span class="logo-mark">JM</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#work" data-i18n="nav.work">Work</a></li>
+          <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+          <span class="lang-option" data-lang="es">ES</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="en">EN</span>
+        </button>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+
+      <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <p class="hero-status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero.status">Available for new opportunities</span>
+        </p>
+
+        <h1 class="hero-title">
+          <span data-i18n="hero.title.line1">Software developer</span><br />
+          <span class="hero-accent" data-i18n="hero.title.line2">building things for the web</span>
+        </h1>
+
+        <p class="hero-sub" data-i18n="hero.sub">
+          I'm Juan Tomás — a Systems Programming Technician from Buenos Aires. I build fullstack web apps and native Android applications, with a focus on clean architecture and details that matter.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">
+            <span data-i18n="hero.cta.primary">See my work</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.secondary">Get in touch</a>
         </div>
+
+        <ul class="hero-meta">
+          <li>
+            <span class="hero-meta-label" data-i18n="hero.meta.location">Location</span>
+            <span class="hero-meta-value">Buenos Aires, AR</span>
+          </li>
+          <li>
+            <span class="hero-meta-label" data-i18n="hero.meta.role">Role</span>
+            <span class="hero-meta-value" data-i18n="hero.meta.role.value">Fullstack / Mobile</span>
+          </li>
+          <li>
+            <span class="hero-meta-label" data-i18n="hero.meta.timezone">Timezone</span>
+            <span class="hero-meta-value">GMT−3</span>
+          </li>
+        </ul>
+      </div>
     </section>
-    
-    <section id="about">
-        <div class="container">
-            <h2>Get to know me</h2>
-            <p>
-                I'm a Systems Programming Technician with a deep passion for software development. My main areas of expertise are web development and Android applications. I also have knowledge in game development, although it is not my primary focus. Constantly learning and improving, I enjoy working on projects that challenge me to learn and apply new technologies and practices. You can explore the <a href="#projects">projects</a> I've worked on in detail in the dedicated section of my portfolio.
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">01</span>
+          <h2 class="section-title" data-i18n="about.title">About</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-body">
+            <p class="lead" data-i18n="about.p1">
+              I'm a Systems Programming Technician who genuinely enjoys the craft of building software. Most of my work lives at the intersection of web and mobile — fullstack apps with React and Node, native Android with Kotlin, and the occasional dive into game development with Godot.
             </p>
+            <p data-i18n="about.p2">
+              I care about code that's easy to read six months later, interfaces that respect the user, and shipping things end-to-end rather than handing off half-finished work. I'm currently looking for a full-time software engineering role where I can keep learning alongside people who take the craft seriously.
+            </p>
+          </div>
+
+          <aside class="about-side">
+            <div class="about-card">
+              <span class="about-card-label" data-i18n="about.education">Education</span>
+              <p class="about-card-text" data-i18n="about.education.value">Systems Programming Technician</p>
+            </div>
+            <div class="about-card">
+              <span class="about-card-label" data-i18n="about.focus">Focus</span>
+              <p class="about-card-text" data-i18n="about.focus.value">Web · Mobile · Clean architecture</p>
+            </div>
+            <div class="about-card">
+              <span class="about-card-label" data-i18n="about.languages">Languages</span>
+              <p class="about-card-text" data-i18n="about.languages.value">Spanish (native) · English (professional)</p>
+            </div>
+          </aside>
         </div>
+      </div>
     </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>The Movie Verse</h3>
-                    <p>Fullstack web development project using React.js and Express.js. The backend is built using the MVC pattern, JWT authentication, and a custom REST API that connects to my database.</p>
-                    <a href="https://github.com/JuantMartinez17/TheMovieVerse" target="_blank" class="github-link">
-                        <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28
-                            -.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28
-                            -.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08
-                            -2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 
-                            2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75
-                            -3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 
-                            8.012 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        Checkout the code!
-                    </a>
-                </div>
-                <div class="project-card">
-                    <h3>MealMind</h3>
-                    <p>Android mobile app using Kotlin and XML, based on the MVVM pattern. It connects to an external API using API keys and utilizes RecyclerView to display the data.</p>
-                    <a href="https://github.com/JuantMartinez17/MealMind" target="_blank" class="github-link">
-                        <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28
-                            -.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28
-                            -.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08
-                            -2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 
-                            2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75
-                            -3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 
-                            8.012 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        Checkout the code!
-                    </a>
-                </div>
-                <div class="project-card">
-                    <h3>The Knight's Odissey</h3>
-                    <p>2D videogame development using Godot and GDScript. The project includes frame-by-frame animations, data persistence, and the implementation of state machines for game logic.</p>
-                    <a href="https://github.com/JuantMartinez17/TheKnightsOdissey_OnGodot" target="_blank" class="github-link">
-                        <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28
-                            -.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28
-                            -.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08
-                            -2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 
-                            2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75
-                            -3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 
-                            8.012 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        Checkout the code!
-                    </a>
-                </div>
-            </div>
+    <!-- Work / Projects -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title" data-i18n="work.title">Selected work</h2>
         </div>
-    </section>    
 
-    <section id="contact">
-        <div class="container">
-            <h2>Contact me</h2>
-            <p>If you want to get in touch with me, feel free to send me a message.</p>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="text" id="subject" placeholder="Subject" required>
-                <textarea id="message" placeholder="Message" required></textarea>
-                <button type="submit" class="btn">Send</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>Copyright © 2025 Juan Tomas Martinez.</p>
-            <div class="social-links">
-                <a href="https://github.com/JuantMartinez17" target="_blank" class="github-footer-link">
-                    <svg width="30" height="30" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 
-                        0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28
-                        -.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28
-                        -.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08
-                        -2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 
-                        2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75
-                        -3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 
-                        8.012 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                    </svg>
-                    GitHub
+        <div class="work-list">
+
+          <!-- Project 1 -->
+          <article class="work-item">
+            <header class="work-meta">
+              <span class="work-year">2024</span>
+              <span class="work-type" data-i18n="work.type.fullstack">Fullstack web</span>
+            </header>
+            <div class="work-body">
+              <h3 class="work-title">The Movie Verse</h3>
+              <p class="work-desc" data-i18n="work.movieverse.desc">
+                A fullstack movie discovery platform. Backend built with Express following the MVC pattern, JWT-based auth, and a custom REST API on top of my own database. Frontend in React.
+              </p>
+              <ul class="work-stack">
+                <li>React</li>
+                <li>Express</li>
+                <li>Node.js</li>
+                <li>JWT</li>
+                <li>REST API</li>
+                <li>MVC</li>
+              </ul>
+              <div class="work-links">
+                <a href="https://github.com/JuantMartinez17/TheMovieVerse" target="_blank" rel="noopener noreferrer" class="work-link">
+                  <span data-i18n="work.code">View code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/in/juan-tomas-martinez/" target="_blank" class="linkedin-footer-link">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.98 3.5C4.98 4.33 4.3 5 3.5 5S2 4.33 2 3.5 2.67 2 3.5 2s1.48.67 1.48 1.5zM2.02 6h3V20h-3V6zm6 0h3v2h.04c.42-.72 1.44-1.5 2.96-1.5 3.17 0 3.98 2.08 3.98 4.8V20h-3v-7.5c0-1.79-.03-4.1-2.5-4.1s-2.88 1.95-2.88 4V20h-3V6z"/>
-                    </svg>
-                    LinkedIn
-                </a>
+              </div>
             </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="work-item">
+            <header class="work-meta">
+              <span class="work-year">2024</span>
+              <span class="work-type" data-i18n="work.type.mobile">Android app</span>
+            </header>
+            <div class="work-body">
+              <h3 class="work-title">MealMind</h3>
+              <p class="work-desc" data-i18n="work.mealmind.desc">
+                Native Android app built in Kotlin with the MVVM pattern. Connects to an external recipes API with API key auth, uses RecyclerView for data lists, and follows Android best practices for state management.
+              </p>
+              <ul class="work-stack">
+                <li>Kotlin</li>
+                <li>Android</li>
+                <li>MVVM</li>
+                <li>XML</li>
+                <li>RecyclerView</li>
+                <li>REST API</li>
+              </ul>
+              <div class="work-links">
+                <a href="https://github.com/JuantMartinez17/MealMind" target="_blank" rel="noopener noreferrer" class="work-link">
+                  <span data-i18n="work.code">View code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="work-item">
+            <header class="work-meta">
+              <span class="work-year">2023</span>
+              <span class="work-type" data-i18n="work.type.game">2D game</span>
+            </header>
+            <div class="work-body">
+              <h3 class="work-title">The Knight's Odyssey</h3>
+              <p class="work-desc" data-i18n="work.knight.desc">
+                A 2D platformer built in Godot with GDScript. Features frame-by-frame animations, persistent save data, and state machines driving enemy and player behavior.
+              </p>
+              <ul class="work-stack">
+                <li>Godot</li>
+                <li>GDScript</li>
+                <li>State Machines</li>
+                <li>2D Animation</li>
+              </ul>
+              <div class="work-links">
+                <a href="https://github.com/JuantMartinez17/TheKnightsOdissey_OnGodot" target="_blank" rel="noopener noreferrer" class="work-link">
+                  <span data-i18n="work.code">View code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
-    </footer>
-    
-    
-    
-    <script src="scripts/contact.js"></script>
+
+        <a href="https://github.com/JuantMartinez17" target="_blank" rel="noopener noreferrer" class="work-all">
+          <span data-i18n="work.all">See all repositories on GitHub</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">03</span>
+          <h2 class="section-title" data-i18n="stack.title">Stack</h2>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-group">
+            <h3 class="stack-group-title" data-i18n="stack.frontend">Frontend</h3>
+            <ul class="stack-list">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>HTML &amp; CSS</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-group-title" data-i18n="stack.backend">Backend</h3>
+            <ul class="stack-list">
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>REST APIs</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-group-title" data-i18n="stack.mobile">Mobile</h3>
+            <ul class="stack-list">
+              <li>Kotlin</li>
+              <li>Android SDK</li>
+              <li>MVVM</li>
+              <li>XML Layouts</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 class="stack-group-title" data-i18n="stack.tools">Tools</h3>
+            <ul class="stack-list">
+              <li>Git &amp; GitHub</li>
+              <li>VS Code</li>
+              <li>Android Studio</li>
+              <li>Godot</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">04</span>
+          <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-intro">
+            <p class="contact-lead" data-i18n="contact.lead">
+              Looking for a developer? Have a question? Want to chat about a project? Send a message and I'll get back within 24 hours.
+            </p>
+            <ul class="contact-direct">
+              <li>
+                <span class="contact-label" data-i18n="contact.email">Email</span>
+                <a href="mailto:juantomas.martinez17@gmail.com">juantomas.martinez17@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/juan-tomas-martinez/" target="_blank" rel="noopener noreferrer">/in/juan-tomas-martinez</a>
+              </li>
+              <li>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/JuantMartinez17" target="_blank" rel="noopener noreferrer">@JuantMartinez17</a>
+              </li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="field">
+              <label for="name" data-i18n="form.name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+              <span class="field-error" data-error-for="name"></span>
+            </div>
+            <div class="field">
+              <label for="email" data-i18n="form.email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+              <span class="field-error" data-error-for="email"></span>
+            </div>
+            <div class="field">
+              <label for="subject" data-i18n="form.subject">Subject</label>
+              <input type="text" id="subject" name="subject" required />
+              <span class="field-error" data-error-for="subject"></span>
+            </div>
+            <div class="field">
+              <label for="message" data-i18n="form.message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <span class="field-error" data-error-for="message"></span>
+            </div>
+            <!-- Honeypot anti-bot field -->
+            <div class="field honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <span class="btn-text" data-i18n="form.send">Send message</span>
+              <span class="btn-loading" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+              </span>
+            </button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">
+        © <span id="year">2026</span> Juan Tomás Martínez.
+        <span data-i18n="footer.built">Built with HTML, CSS &amp; JavaScript.</span>
+      </p>
+      <ul class="footer-social">
+        <li>
+          <a href="https://github.com/JuantMartinez17" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.012 8.012 0 0016 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/juan-tomas-martinez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.33 4.3 5 3.5 5S2 4.33 2 3.5 2.67 2 3.5 2s1.48.67 1.48 1.5zM2.02 6h3V20h-3V6zm6 0h3v2h.04c.42-.72 1.44-1.5 2.96-1.5 3.17 0 3.98 2.08 3.98 4.8V20h-3v-7.5c0-1.79-.03-4.1-2.5-4.1s-2.88 1.95-2.88 4V20h-3V6z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:juantomas.martinez17@gmail.com" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" type="module"></script>
 </body>
 </html>
