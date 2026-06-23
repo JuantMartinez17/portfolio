@@ -18,7 +18,9 @@
       "Bash(ls \"/c/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe\")",
       "Read(//c/Users/Juan Tomás Martínez/AppData/Local/Temp/**)",
       "Bash(cd \"c:/Users/Juan Tomás Martínez/Documents/portfolio/portfolio\" && rm -f __shot.html assets/profile.jpg && rm -f \"C:/Users/Juan Tomás Martínez/AppData/Local/Temp/pf_\"*.png \"C:/Users/Juan Tomás Martínez/AppData/Local/Temp/pf2_\"*.png \"C:/Users/Juan Tomás Martínez/AppData/Local/Temp/portfolio_preview.png\" && echo \"cleaned\" && echo \"--- git status ---\" && git status --short && echo \"--- tracked new assets ---\" && ls assets)",
-      "Read(//c/Users/Juan Tomás Martínez/.claude/projects/c--Users-Juan-Tom-s-Mart-nez-Documents-portfolio-portfolio/memory/**)"
+      "Read(//c/Users/Juan Tomás Martínez/.claude/projects/c--Users-Juan-Tom-s-Mart-nez-Documents-portfolio-portfolio/memory/**)",
+      "Bash(git checkout *)",
+      "Bash(git pull *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\Juan Tomás Martínez\\AppData\\Local\\Temp"

@@ -260,6 +260,43 @@
 
         <div class="work-list">
 
+          <!-- Project: WC 2026 Predictor (featured) -->
+          <article class="work-item">
+            <header class="work-meta">
+              <span class="work-year">2025</span>
+              <span class="work-type" data-i18n="work.type.ml">Machine Learning · API</span>
+            </header>
+            <div class="work-body">
+              <h3 class="work-title" data-i18n="work.predictor.title">World Cup 2026 Match Predictor</h3>
+              <p class="work-desc" data-i18n="work.predictor.desc">
+                A backend that forecasts every World Cup 2026 match — win/draw/loss probabilities, expected goals and the most likely scorelines — served as a REST API. The engine blends a Dixon-Coles statistical model with Elo ratings and Monte Carlo simulation.
+              </p>
+              <p class="work-highlight">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <span data-i18n="work.predictor.metric">55.9% result accuracy · backtested on 2018–2022 World Cups · 48 teams</span>
+              </p>
+              <ul class="work-stack">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>NumPy/SciPy</li>
+                <li>Dixon-Coles</li>
+                <li>Elo</li>
+                <li>Monte Carlo</li>
+              </ul>
+              <div class="work-links">
+                <a href="https://wc-match-predictor-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="work-link work-link--demo">
+                  <span data-i18n="work.demo">Live demo</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/JuantMartinez17/wc_match_predictor" target="_blank" rel="noopener noreferrer" class="work-link">
+                  <span data-i18n="work.code">View code</span>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </a>
+              </div>
+              <p class="work-note" data-i18n="work.predictor.note">Frontend built by a collaborator; the prediction model and API are mine.</p>
+            </div>
+          </article>
+
           <!-- Project 1 -->
           <article class="work-item">
             <header class="work-meta">
@@ -269,7 +306,7 @@
             <div class="work-body">
               <h3 class="work-title">The Movie Verse</h3>
               <p class="work-desc" data-i18n="work.movieverse.desc">
-                A fullstack movie discovery platform. Backend built with Express following the MVC pattern, JWT-based auth, and a custom REST API on top of my own database. Frontend in React.
+                A fullstack movie-discovery app: browse, search and save films to personal lists. I designed it end to end — a JWT-secured REST API over my own database, with a React frontend.
               </p>
               <ul class="work-stack">
                 <li>React</li>
@@ -297,7 +334,7 @@
             <div class="work-body">
               <h3 class="work-title">MealMind</h3>
               <p class="work-desc" data-i18n="work.mealmind.desc">
-                Native Android app built in Kotlin with the MVVM pattern. Connects to an external recipes API with API key auth, uses RecyclerView for data lists, and follows Android best practices for state management.
+                A native Android recipe app: search meals and browse details pulled live from an external API. Built on a clean MVVM architecture with proper state handling, following Android best practices.
               </p>
               <ul class="work-stack">
                 <li>Kotlin</li>
@@ -325,7 +362,7 @@
             <div class="work-body">
               <h3 class="work-title">The Knight's Odyssey</h3>
               <p class="work-desc" data-i18n="work.knight.desc">
-                A 2D platformer built in Godot with GDScript. Features frame-by-frame animations, persistent save data, and state machines driving enemy and player behavior.
+                A 2D platformer with hand-animated sprites, persistent save data, and state-machine-driven enemy and player behavior — a hands-on dive into game loops and real-time logic.
               </p>
               <ul class="work-stack">
                 <li>Godot</li>
