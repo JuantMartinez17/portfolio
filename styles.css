@@ -16,7 +16,11 @@
   --text-tertiary: #6b6b6b;
   --accent: #ffffff;
   --accent-muted: #f5f5f5;
-  --success: #4ade80;
+  /* Brand accent (emerald, derived from CV) */
+  --accent-brand: #34d399;
+  --accent-brand-strong: #10b981;
+  --accent-brand-soft: color-mix(in srgb, var(--accent-brand) 14%, transparent);
+  --success: #34d399;
   --error: #f87171;
 
   /* Type scale (fluid) */
@@ -77,6 +81,10 @@
   --text-tertiary: #8a8a8a;
   --accent: #0a0a0a;
   --accent-muted: #1a1a1a;
+  --accent-brand: #059669;
+  --accent-brand-strong: #047857;
+  --accent-brand-soft: color-mix(in srgb, var(--accent-brand) 12%, transparent);
+  --success: #059669;
 }
 
 /* ---- Reset ---- */
@@ -248,7 +256,8 @@ ul {
 }
 
 .logo:hover .logo-mark {
-  border-color: var(--text-secondary);
+  border-color: var(--accent-brand);
+  color: var(--accent-brand);
   transform: rotate(-3deg);
 }
 
@@ -444,6 +453,60 @@ ul {
   z-index: 2;
 }
 
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero-inner {
+    grid-template-columns: 1.6fr 0.9fr;
+    gap: var(--space-12);
+  }
+}
+
+.hero-photo {
+  order: -1;
+  justify-self: start;
+  width: clamp(120px, 38vw, 150px);
+  margin: 0;
+  animation: fadeInUp 0.7s var(--ease) 0.15s backwards;
+}
+
+@media (min-width: 860px) {
+  .hero-photo {
+    order: 0;
+    justify-self: end;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+.hero-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-elevated);
+  filter: grayscale(0.15);
+  transition: filter var(--dur) var(--ease), border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.hero-photo:hover img {
+  filter: grayscale(0);
+  border-color: var(--accent-brand);
+  transform: translateY(-3px);
+}
+
+/* Hidden when no profile image is available (set by JS on load error) */
+.hero-photo[hidden] {
+  display: none;
+}
+
 .hero-status {
   display: inline-flex;
   align-items: center;
@@ -483,7 +546,7 @@ ul {
 }
 
 .hero-accent {
-  color: var(--text-secondary);
+  color: var(--accent-brand);
   font-weight: 400;
 }
 
@@ -620,7 +683,7 @@ ul {
 .section-num {
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
-  color: var(--text-tertiary);
+  color: var(--accent-brand);
   letter-spacing: 0.05em;
 }
 
@@ -794,7 +857,8 @@ ul {
 }
 
 .work-link:hover {
-  border-color: var(--text);
+  border-color: var(--accent-brand);
+  color: var(--accent-brand);
 }
 
 .work-link:hover svg {
@@ -821,6 +885,120 @@ ul {
 
 .work-all:hover svg {
   transform: translateX(2px);
+}
+
+/* ============================================
+   EXPERIENCE / TIMELINE
+   ============================================ */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+}
+
+@media (min-width: 768px) {
+  .timeline-item {
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.timeline-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.timeline-company {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+.timeline-period {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--accent-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-place {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+}
+
+/* Roles: vertical line with nodes */
+.timeline-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding-left: var(--space-6);
+}
+
+.timeline-body::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border-strong);
+}
+
+.timeline-role {
+  position: relative;
+}
+
+.timeline-role::before {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--space-6));
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-brand);
+  box-shadow: 0 0 0 3px var(--accent-brand-soft);
+}
+
+.timeline-role-title {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-2);
+}
+
+.timeline-role-desc {
+  color: var(--text-secondary);
+  font-size: var(--fs-base);
+  max-width: 60ch;
+}
+
+.timeline-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.timeline-stack li {
+  padding: var(--space-1) var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 100px;
 }
 
 /* ============================================
@@ -874,7 +1052,7 @@ ul {
 
 .stack-list li:hover::before {
   width: 10px;
-  background: var(--text);
+  background: var(--accent-brand);
 }
 
 /* ============================================
@@ -1108,7 +1286,7 @@ ul {
    FOCUS STATES
    ============================================ */
 :focus-visible {
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--accent-brand);
   outline-offset: 2px;
   border-radius: var(--r-sm);
 }
