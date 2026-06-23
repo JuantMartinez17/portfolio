@@ -7,14 +7,16 @@ const translations = {
   es: {
     "a11y.skip": "Saltar al contenido",
     "nav.about": "Sobre mí",
+    "nav.experience": "Experiencia",
     "nav.work": "Proyectos",
     "nav.stack": "Stack",
     "nav.contact": "Contacto",
     "hero.status": "Disponible para nuevas oportunidades",
-    "hero.title.line1": "Software developer",
-    "hero.title.line2": "construyendo cosas para la web",
-    "hero.sub": "Soy Juan Tomás — Técnico en Programación de Sistemas, de Buenos Aires. Construyo apps web fullstack y aplicaciones Android nativas, con foco en arquitectura limpia y los detalles que importan.",
+    "hero.title.line1": "Desarrollador de software",
+    "hero.title.line2": "Construyendo aplicaciones reales, de punta a punta.",
+    "hero.sub": "Soy Juan Tomás — Técnico Universitario en Programación de Sistemas, de Buenos Aires. Construyo apps web fullstack y aplicaciones Android nativas, con foco en arquitectura limpia y los detalles que importan.",
     "hero.cta.primary": "Ver mi trabajo",
+    "hero.cta.cv": "Descargar CV",
     "hero.cta.secondary": "Contactarme",
     "hero.meta.location": "Ubicación",
     "hero.meta.role": "Rol",
@@ -24,11 +26,24 @@ const translations = {
     "about.p1": "Soy Técnico en Programación de Sistemas y disfruto genuinamente del oficio de construir software. La mayoría de mi trabajo vive en la intersección entre web y mobile — apps fullstack con React y Node, Android nativo con Kotlin, y alguna que otra inmersión en desarrollo de juegos con Godot.",
     "about.p2": "Me importa el código que sea fácil de leer seis meses después, las interfaces que respetan al usuario, y entregar cosas de punta a punta en lugar de pasar trabajo a medio hacer. Actualmente busco un puesto full-time como ingeniero de software donde pueda seguir aprendiendo junto a gente que se tome el oficio en serio.",
     "about.education": "Formación",
-    "about.education.value": "Técnico en Programación de Sistemas",
+    "about.education.value": "Técnico Universitario en Programación de Sistemas (2023–2024)",
     "about.focus": "Foco",
     "about.focus.value": "Web · Mobile · Arquitectura limpia",
     "about.languages": "Idiomas",
-    "about.languages.value": "Español (nativo) · Inglés (profesional)",
+    "about.languages.value": "Español (nativo) · Inglés — CILE 3 (UBA)",
+    "experience.title": "Experiencia",
+    "experience.aeroterra.period": "Abr 2025 — Presente",
+    "experience.aeroterra.place": "Buenos Aires, AR",
+    "experience.role.functional": "Analista Funcional IT",
+    "experience.functional.desc": "Relevamiento y análisis de requerimientos para proyectos de software. Diseñé flujos de información y modelos de datos, y aporté a tableros para mantenimiento de activos y gestión de emergencias.",
+    "experience.role.solutions": "Solutions Engineer",
+    "experience.solutions.desc": "Diseño de soluciones end-to-end como primer punto de contacto técnico: traduciendo necesidades de negocio en arquitecturas viables y escalables, y normalizando e integrando datos de múltiples fuentes.",
+    "experience.role.support": "Analista de Soporte Técnico",
+    "experience.support.desc": "Soporte técnico de aplicaciones empresariales, con foco en el análisis y resolución de incidentes: sistemas de tickets, diagnóstico a nivel software e infraestructura, y arquitecturas cliente-servidor en producción.",
+    "experience.chip.requirements": "Análisis de requerimientos",
+    "experience.chip.datamodeling": "Modelado de datos",
+    "experience.chip.architecture": "Arquitectura de soluciones",
+    "experience.chip.integration": "Integración de datos",
     "work.title": "Proyectos destacados",
     "work.type.fullstack": "Web fullstack",
     "work.type.mobile": "App Android",
@@ -41,6 +56,8 @@ const translations = {
     "stack.title": "Stack",
     "stack.frontend": "Frontend",
     "stack.backend": "Backend",
+    "stack.data": "Datos & Mobile",
+    "stack.data.modeling": "Modelado de datos",
     "stack.mobile": "Mobile",
     "stack.tools": "Herramientas",
     "contact.title": "Hablemos",
@@ -61,14 +78,16 @@ const translations = {
   en: {
     "a11y.skip": "Skip to content",
     "nav.about": "About",
+    "nav.experience": "Experience",
     "nav.work": "Work",
     "nav.stack": "Stack",
     "nav.contact": "Contact",
     "hero.status": "Available for new opportunities",
     "hero.title.line1": "Software developer",
-    "hero.title.line2": "building things for the web",
-    "hero.sub": "I'm Juan Tomás — a Systems Programming Technician from Buenos Aires. I build fullstack web apps and native Android applications, with a focus on clean architecture and the details that matter.",
+    "hero.title.line2": "Building real applications, end to end.",
+    "hero.sub": "I'm Juan Tomás — a University Technician in Systems Programming from Buenos Aires. I build fullstack web apps and native Android applications, with a focus on clean architecture and the details that matter.",
     "hero.cta.primary": "See my work",
+    "hero.cta.cv": "Download CV",
     "hero.cta.secondary": "Get in touch",
     "hero.meta.location": "Location",
     "hero.meta.role": "Role",
@@ -78,11 +97,24 @@ const translations = {
     "about.p1": "I'm a Systems Programming Technician who genuinely enjoys the craft of building software. Most of my work lives at the intersection of web and mobile — fullstack apps with React and Node, native Android with Kotlin, and the occasional dive into game development with Godot.",
     "about.p2": "I care about code that's easy to read six months later, interfaces that respect the user, and shipping things end-to-end rather than handing off half-finished work. I'm currently looking for a full-time software engineering role where I can keep learning alongside people who take the craft seriously.",
     "about.education": "Education",
-    "about.education.value": "Systems Programming Technician",
+    "about.education.value": "University Technician in Systems Programming (2023–2024)",
     "about.focus": "Focus",
     "about.focus.value": "Web · Mobile · Clean architecture",
     "about.languages": "Languages",
-    "about.languages.value": "Spanish (native) · English (professional)",
+    "about.languages.value": "Spanish (native) · English — CILE 3 (UBA)",
+    "experience.title": "Experience",
+    "experience.aeroterra.period": "Apr 2025 — Present",
+    "experience.aeroterra.place": "Buenos Aires, AR",
+    "experience.role.functional": "IT Functional Analyst",
+    "experience.functional.desc": "Requirements gathering and analysis for software projects. Designed information flows and data models, and contributed to dashboards for asset maintenance and emergency management.",
+    "experience.role.solutions": "Solutions Engineer",
+    "experience.solutions.desc": "Designed end-to-end solutions as the first technical point of contact: translating business needs into viable, scalable architectures, and normalizing and integrating data from multiple sources.",
+    "experience.role.support": "Technical Support Analyst",
+    "experience.support.desc": "Technical support for enterprise applications, focused on incident analysis and resolution: ticketing systems, software and infrastructure diagnostics, and client-server architectures in production.",
+    "experience.chip.requirements": "Requirements analysis",
+    "experience.chip.datamodeling": "Data modeling",
+    "experience.chip.architecture": "Solution architecture",
+    "experience.chip.integration": "Data integration",
     "work.title": "Selected work",
     "work.type.fullstack": "Fullstack web",
     "work.type.mobile": "Android app",
@@ -95,6 +127,8 @@ const translations = {
     "stack.title": "Stack",
     "stack.frontend": "Frontend",
     "stack.backend": "Backend",
+    "stack.data": "Data & Mobile",
+    "stack.data.modeling": "Data modeling",
     "stack.mobile": "Mobile",
     "stack.tools": "Tools",
     "contact.title": "Get in touch",
@@ -141,10 +175,19 @@ function setLang(lang) {
     opt.classList.toggle("active", opt.dataset.lang === lang);
   });
 
+  // Point the CV download to the matching-language PDF
+  const cv = document.getElementById("cv-download");
+  if (cv) {
+    cv.href =
+      lang === "es"
+        ? "assets/cv/JuanTomasMartinez_Curriculum.pdf"
+        : "assets/cv/JuanTomasMartinez_Resume.pdf";
+  }
+
   // Update document title
   document.title =
     lang === "es"
-      ? "Juan Tomás Martínez — Software Developer"
+      ? "Juan Tomás Martínez — Desarrollador de Software"
       : "Juan Tomás Martínez — Software Developer";
 }
 
@@ -205,7 +248,7 @@ function initMobileMenu() {
 /* ---- Scroll reveal ---- */
 function initReveal() {
   const targets = document.querySelectorAll(
-    ".section-head, .about-grid, .work-item, .stack-group, .contact-grid"
+    ".section-head, .about-grid, .timeline-item, .work-item, .stack-group, .contact-grid"
   );
   targets.forEach((el) => el.classList.add("reveal"));
 
@@ -233,6 +276,20 @@ function initReveal() {
 function initYear() {
   const el = document.getElementById("year");
   if (el) el.textContent = String(new Date().getFullYear());
+}
+
+/* ---- Hero photo (hide gracefully if the image is missing) ---- */
+function initPhoto() {
+  const fig = document.getElementById("hero-photo");
+  const img = fig?.querySelector("img");
+  if (!fig || !img) return;
+
+  const hide = () => fig.setAttribute("hidden", "");
+  if (img.complete && img.naturalWidth === 0) {
+    hide();
+  } else {
+    img.addEventListener("error", hide, { once: true });
+  }
 }
 
 /* ---- Form ---- */
@@ -321,14 +378,24 @@ function initForm() {
 
     if (!validate(data)) return;
 
+    // Formspree (or any compatible service) endpoint, read from the form's action.
+    const endpoint = form.getAttribute("action") || "";
+    if (!endpoint || endpoint.includes("YOUR_FORM_ID")) {
+      feedback.textContent = t("form.error.generic");
+      feedback.classList.add("error");
+      return;
+    }
+
     submitBtn.setAttribute("data-state", "loading");
     submitBtn.disabled = true;
 
     try {
-      // Posts to your existing backend endpoint
-      const response = await fetch("/api/contact", {
+      const response = await fetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
         body: JSON.stringify({
           name: data.name,
           email: data.email,
@@ -373,6 +440,7 @@ function init() {
   initMobileMenu();
   initReveal();
   initYear();
+  initPhoto();
   initForm();
 }
 

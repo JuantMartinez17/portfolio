@@ -14,10 +14,10 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://juantomasmartinez.com/" />
+  <meta property="og:url" content="https://juantmartinez17.github.io/portfolio/" />
   <meta property="og:title" content="Juan Tomás Martínez — Software Developer" />
   <meta property="og:description" content="Software developer from Buenos Aires. Building web and mobile applications." />
-  <meta property="og:image" content="/assets/og-image.png" />
+  <meta property="og:image" content="https://juantmartinez17.github.io/portfolio/assets/og-image.png" />
   <meta property="og:locale" content="es_AR" />
   <meta property="og:locale:alternate" content="en_US" />
 
@@ -25,11 +25,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Juan Tomás Martínez — Software Developer" />
   <meta name="twitter:description" content="Software developer from Buenos Aires. Building web and mobile applications." />
-  <meta name="twitter:image" content="/assets/og-image.png" />
+  <meta name="twitter:image" content="https://juantmartinez17.github.io/portfolio/assets/og-image.png" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <link rel="alternate icon" href="/assets/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <!-- Fonts: Geist + Geist Mono (Vercel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,7 +45,7 @@
     "@type": "Person",
     "name": "Juan Tomás Martínez",
     "jobTitle": "Software Developer",
-    "url": "https://juantomasmartinez.com/",
+    "url": "https://juantmartinez17.github.io/portfolio/",
     "sameAs": [
       "https://github.com/JuantMartinez17",
       "https://www.linkedin.com/in/juan-tomas-martinez/"
@@ -77,6 +76,7 @@
       <nav class="nav" aria-label="Primary">
         <ul>
           <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
           <li><a href="#work" data-i18n="nav.work">Work</a></li>
           <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
@@ -111,28 +111,42 @@
     <!-- Hero -->
     <section class="hero" id="hero">
       <div class="container">
-        <p class="hero-status">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span data-i18n="hero.status">Available for new opportunities</span>
-        </p>
+        <div class="hero-inner">
+          <div class="hero-content">
+            <p class="hero-status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.status">Available for new opportunities</span>
+            </p>
 
-        <h1 class="hero-title">
-          <span data-i18n="hero.title.line1">Software developer</span><br />
-          <span class="hero-accent" data-i18n="hero.title.line2">Building real applications from ideas.</span>
-        </h1>
+            <h1 class="hero-title">
+              <span data-i18n="hero.title.line1">Software developer</span><br />
+              <span class="hero-accent" data-i18n="hero.title.line2">Building real applications, end to end.</span>
+            </h1>
 
-        <p class="hero-sub" data-i18n="hero.sub">
-          I'm Juan Tomás — a Systems Programming Technician from Buenos Aires. I build fullstack web apps and native Android applications, with a focus on clean architecture and details that matter.
-        </p>
+            <p class="hero-sub" data-i18n="hero.sub">
+              I'm Juan Tomás — a University Technician in Systems Programming from Buenos Aires. I build fullstack web apps and native Android applications, with a focus on clean architecture and the details that matter.
+            </p>
 
-        <div class="hero-cta">
-          <a href="#work" class="btn btn-primary">
-            <span data-i18n="hero.cta.primary">See my work</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M13 5l7 7-7 7"/>
-            </svg>
-          </a>
-          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.secondary">Get in touch</a>
+            <div class="hero-cta">
+              <a href="#work" class="btn btn-primary">
+                <span data-i18n="hero.cta.primary">See my work</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a id="cv-download" href="assets/cv/JuanTomasMartinez_Resume.pdf" download class="btn btn-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                <span data-i18n="hero.cta.cv">Download CV</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta.secondary">Get in touch</a>
+            </div>
+          </div>
+
+          <figure class="hero-photo" id="hero-photo">
+            <img src="assets/profile.jpg" alt="Juan Tomás Martínez" width="360" height="440" decoding="async" />
+          </figure>
         </div>
 
         <ul class="hero-meta">
@@ -173,7 +187,7 @@
           <aside class="about-side">
             <div class="about-card">
               <span class="about-card-label" data-i18n="about.education">Education</span>
-              <p class="about-card-text" data-i18n="about.education.value">Systems Programming Technician</p>
+              <p class="about-card-text" data-i18n="about.education.value">University Technician in Systems Programming (2023–2024)</p>
             </div>
             <div class="about-card">
               <span class="about-card-label" data-i18n="about.focus">Focus</span>
@@ -181,9 +195,57 @@
             </div>
             <div class="about-card">
               <span class="about-card-label" data-i18n="about.languages">Languages</span>
-              <p class="about-card-text" data-i18n="about.languages.value">Spanish (native) · English (professional)</p>
+              <p class="about-card-text" data-i18n="about.languages.value">Spanish (native) · English — CILE 3 (UBA)</p>
             </div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-num">02</span>
+          <h2 class="section-title" data-i18n="experience.title">Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-aside">
+              <span class="timeline-company">Aeroterra</span>
+              <span class="timeline-period" data-i18n="experience.aeroterra.period">Apr 2025 — Present</span>
+              <span class="timeline-place" data-i18n="experience.aeroterra.place">Buenos Aires, AR</span>
+            </div>
+
+            <div class="timeline-body">
+              <div class="timeline-role">
+                <h3 class="timeline-role-title" data-i18n="experience.role.functional">IT Functional Analyst</h3>
+                <p class="timeline-role-desc" data-i18n="experience.functional.desc">
+                  Requirements gathering and analysis for software projects. Designed information flows and data models, and contributed to dashboards for asset maintenance and emergency management.
+                </p>
+              </div>
+              <div class="timeline-role">
+                <h3 class="timeline-role-title" data-i18n="experience.role.solutions">Solutions Engineer</h3>
+                <p class="timeline-role-desc" data-i18n="experience.solutions.desc">
+                  Designed end-to-end solutions as the first technical point of contact: translating business needs into viable, scalable architectures, and normalizing and integrating data from multiple sources.
+                </p>
+              </div>
+              <div class="timeline-role">
+                <h3 class="timeline-role-title" data-i18n="experience.role.support">Technical Support Analyst</h3>
+                <p class="timeline-role-desc" data-i18n="experience.support.desc">
+                  Technical support for enterprise applications, focused on incident analysis and resolution: ticketing systems, software and infrastructure diagnostics, and client-server architectures in production.
+                </p>
+              </div>
+
+              <ul class="timeline-stack">
+                <li data-i18n="experience.chip.requirements">Requirements analysis</li>
+                <li data-i18n="experience.chip.datamodeling">Data modeling</li>
+                <li data-i18n="experience.chip.architecture">Solution architecture</li>
+                <li data-i18n="experience.chip.integration">Data integration</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -192,7 +254,7 @@
     <section class="section" id="work">
       <div class="container">
         <div class="section-head">
-          <span class="section-num">02</span>
+          <span class="section-num">03</span>
           <h2 class="section-title" data-i18n="work.title">Selected work</h2>
         </div>
 
@@ -293,7 +355,7 @@
     <section class="section" id="stack">
       <div class="container">
         <div class="section-head">
-          <span class="section-num">03</span>
+          <span class="section-num">04</span>
           <h2 class="section-title" data-i18n="stack.title">Stack</h2>
         </div>
 
@@ -304,6 +366,7 @@
               <li>JavaScript</li>
               <li>TypeScript</li>
               <li>React</li>
+              <li>Angular</li>
               <li>HTML &amp; CSS</li>
             </ul>
           </div>
@@ -312,17 +375,19 @@
             <ul class="stack-list">
               <li>Node.js</li>
               <li>Express</li>
+              <li>PHP</li>
+              <li>Python</li>
               <li>REST APIs</li>
-              <li>SQL</li>
             </ul>
           </div>
           <div class="stack-group">
-            <h3 class="stack-group-title" data-i18n="stack.mobile">Mobile</h3>
+            <h3 class="stack-group-title" data-i18n="stack.data">Data &amp; Mobile</h3>
             <ul class="stack-list">
+              <li>SQL</li>
+              <li data-i18n="stack.data.modeling">Data modeling</li>
               <li>Kotlin</li>
               <li>Android SDK</li>
               <li>MVVM</li>
-              <li>XML Layouts</li>
             </ul>
           </div>
           <div class="stack-group">
@@ -342,7 +407,7 @@
     <section class="section section-contact" id="contact">
       <div class="container">
         <div class="section-head">
-          <span class="section-num">04</span>
+          <span class="section-num">05</span>
           <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
         </div>
 
@@ -354,7 +419,7 @@
             <ul class="contact-direct">
               <li>
                 <span class="contact-label" data-i18n="contact.email">Email</span>
-                <a href="mailto:juantomas.martinez17@gmail.com">juantomas.martinez17@gmail.com</a>
+                <a href="mailto:juantomasm0@gmail.com">juantomasm0@gmail.com</a>
               </li>
               <li>
                 <span class="contact-label">LinkedIn</span>
@@ -366,8 +431,7 @@
               </li>
             </ul>
           </div>
-
-          <form id="contact-form" class="contact-form" novalidate>
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/mzdlzlnj" method="POST" novalidate>
             <div class="field">
               <label for="name" data-i18n="form.name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required />
@@ -431,7 +495,7 @@
           </a>
         </li>
         <li>
-          <a href="mailto:juantomas.martinez17@gmail.com" aria-label="Email">
+          <a href="mailto:juantomasm0@gmail.com" aria-label="Email">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
