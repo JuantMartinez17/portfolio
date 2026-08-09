@@ -35,6 +35,29 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
+  <!-- Theme + language, applied before paint to avoid a flash.
+       Mirrors getInitialTheme()/getInitialLang() in scripts/main.js — keep the
+       storage keys and the fallbacks in sync if you change them there. -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("portfolio:theme");
+        if (theme !== "dark" && theme !== "light") {
+          theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+
+        var lang = localStorage.getItem("portfolio:lang");
+        if (lang !== "es" && lang !== "en") {
+          lang = (navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en";
+        }
+        document.documentElement.lang = lang;
+      } catch (e) {
+        /* localStorage can throw in private mode — the HTML defaults stand. */
+      }
+    })();
+  </script>
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
@@ -145,7 +168,7 @@
           </div>
 
           <figure class="hero-photo" id="hero-photo">
-            <img src="assets/profile.jpg" alt="Juan Tomás Martínez" width="360" height="440" decoding="async" />
+            <img src="assets/profile.jpg" alt="Juan Tomás Martínez" width="720" height="900" decoding="async" fetchpriority="high" />
           </figure>
         </div>
 

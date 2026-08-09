@@ -161,6 +161,9 @@ const translations = {
 };
 
 /* ---- i18n ---- */
+/* These keys and the fallbacks below are duplicated in the inline <head> script
+   of index.html, which applies theme + lang before the first paint (this file is
+   a module, so it runs too late for that). Change both together. */
 const STORAGE_LANG = "portfolio:lang";
 const STORAGE_THEME = "portfolio:theme";
 
