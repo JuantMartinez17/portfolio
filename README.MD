@@ -69,7 +69,6 @@ Also static-friendly: Vercel, Netlify, Cloudflare Pages.
 
 ## Still open (optional)
 
-1. **Confirm the experience role order** in the Aeroterra timeline (`index.html` → `#experience`) reflects your actual progression.
-2. **Custom domain** — if you buy one (e.g. `juantomasmartinez.com`), add a `CNAME` file and switch the absolute URLs in the `og:`/`twitter:` meta and JSON-LD to that domain.
+1. **Custom domain** — if you buy one (e.g. `juantomasmartinez.com`), add a `CNAME` file and switch the absolute URLs in the `og:`/`twitter:` meta and JSON-LD to that domain.
 
 The OG image lives at `assets/og-image.png` (1200×630); recreate it if you change your name or role. The hero photo is `assets/profile.jpg` (720×900, rendered at 4:5); if it ever goes missing, `initPhoto()` hides the figure instead of showing a broken image.
